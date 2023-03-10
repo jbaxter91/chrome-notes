@@ -1,18 +1,23 @@
 {
-  "name": "Chrome Notes",
-  "version": "1.0",
-  "manifest_version": 2,
-  "description": "Chrome Notes is a simple extension that lets you create notes for any specif webpage wor website",
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
-  "browser_action": {
-    "default_icon": "icon16.png",
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "tabs"
-  ]
-}
+    "manifest_version": 2,
+    "name": "Chrome Notes",
+    "version": "1.0.0",
+    "description": "Notes per web page",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tabs"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      },
+      "default_popup": "popup.html"
+    }
+  }
+  
